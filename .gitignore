@@ -29,6 +29,9 @@ pkg
 #
 .DS_Store
 
+# ignore RVM configuration
+.rvmrc
+
 # For TextMate
 #*.tmproj
 #tmtags
