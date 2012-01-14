@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "guard-tilt"
   gem.homepage = "http://github.com/boof/guard-tilt"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Guard to render templates.}
+  gem.description = %Q{Guard to render templates.}
   gem.email = "florian.assmann@email.de"
   gem.authors = ["Florian Aßmann"]
   # dependencies defined in Gemfile

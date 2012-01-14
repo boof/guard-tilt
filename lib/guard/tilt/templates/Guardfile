@@ -1,0 +1,35 @@
+=begin Sanitize Path
+class Path < Guard::Tilt::Path
+
+  BASE = File.expand_path 'views'
+  ROOT = File.expand_path 'public'
+
+  # Path#sanitize default behaviour is to strip an extname from itself.
+  def sanitize
+    super.sub BASE, ROOT
+  end
+
+  Guard::Tilt.path = self
+
+end
+=end
+
+context = Object.new # default
+=begin Context Object
+context = Object.new
+=end
+
+locals = Hash.new({}) # default
+=begin Local Variables
+require 'yaml'
+locals, path = {}, 'locals.yml'
+def locals.reload
+  update YAML.load_file(path)
+end
+locals.reload
+=end
+
+guard 'tilt', :context => context, :locals => locals do
+  # watch files with two extnames like index.html.erb
+  watch %r'views/.+\..+\..+'
+end
