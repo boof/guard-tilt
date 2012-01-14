@@ -1,9 +1,6 @@
-# Guard-Tilt [![Build Status](https://secure.travis-ci.org/boof/guard-tilt.png?branch=master)](http://travis-ci.org/boof/guard-tilt)
+# Guard-Tilt [![Build Status](https://secure.travis-ci.org/boof/guard-tilt.png?branch=master)](http://travis-ci.org/boof/guard-tilt) [![Maintenance Status](http://stillmaintained.com/boof/guard-tilt.png?branch=master)](http://stillmaintained.com/boof/guard-tilt) [![Dependency Status](https://gemnasium.com/boof/guard-tilt.png?branch=master)](http://gemnasium.com/boof/guard-tilt)
 
 Guard to render templates.
-
-[![Maintenance Status](https://stillmaintained.com/boof/guard-tilt.png)](http://stillmaintained.com/boof/guard-tilt)
-[![Dependency Status](https://gemnasium.com/boof/guard-tilt.png)](http://gemnasium.com/boof/guard-tilt)
 
 ## Configuration
 
