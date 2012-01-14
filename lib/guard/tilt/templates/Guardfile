@@ -1,5 +1,3 @@
-# Guard::Tilt.root = Dir.getwd # (default: Dir.getwd)
-
 context = Struct.new(:path) # default
 =begin Context Object
 context = Class.new do
@@ -23,6 +21,8 @@ guard 'tilt', :context => context, :locals => locals do
   # watch files with two extnames like index.html.erb
   watch %r'views/.+\..+\..+'
 end
+
+# Guard::Tilt.root = Dir.getwd # (default: Dir.getwd)
 
 =begin Output Path
 class OuputPath < Guard::Tilt::OutputPath
