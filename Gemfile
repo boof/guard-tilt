@@ -8,5 +8,5 @@ group :development do
   gem 'yard', '~> 0.7.4'
   gem 'bundler', '~> 1.0.21'
   gem 'jeweler', '~> 1.6.4'
-  gem 'rcov', '>= 0', :platforms => [:mri, :ruby]
+  gem 'rcov', '>= 0', :platforms => [:mri, :jruby]
 end
