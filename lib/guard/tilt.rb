@@ -5,7 +5,7 @@ require 'tilt'
 module Guard
   class Tilt < Guard
 
-    DEFAULT_CONTEXT = Object.new
+    DEFAULT_CONTEXT = Struct.new(:path)
     DEFAULT_LOCALS  = Hash.new({})
 
     def self.path=(klass) @@path = klass; end
@@ -63,7 +63,7 @@ module Guard
         log e.message, :error
       end
       def render_template(template, path)
-        output = template.render(@context, @locals[path])
+        output = template.render(@context.new(path), @locals[path])
       rescue Exception => e
         log e.message, :error
       end

@@ -1,22 +1,29 @@
-=begin Sanitize Path
-class Path < Guard::Tilt::Path
+=begin Output Path
+class OuputPath < Guard::Tilt::Path
 
   BASE = File.expand_path 'views'
   ROOT = File.expand_path 'public'
 
-  # Path#sanitize default behaviour is to strip an extname from itself.
+  # By default Path#sanitize only strips an extname from itself. If you want
+  # to write the rendered output to another folder you can overwrite this
+  # method to return an alternate Path object.
   def sanitize
     super.sub BASE, ROOT
   end
 
+  # Set the Path class.
   Guard::Tilt.path = self
 
 end
 =end
 
-context = Object.new # default
+context = Struct.new(:path) # default
 =begin Context Object
-context = Object.new
+context = Class.new do
+  def initialize(path)
+  end
+  # custom behaviour
+end
 =end
 
 locals = Hash.new({}) # default
