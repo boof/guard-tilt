@@ -1,4 +1,4 @@
-= Guard-Tilt http://www.travis-ci.org/boof/guard-tilt.png http://stillmaintained.com/boof/guard-tilt.png http://gemnasium.com/boof/guard-tilt.png
+= Guard-Tilt http://www.travis-ci.org/boof/guard-tilt.png &nbsp; http://stillmaintained.com/boof/guard-tilt.png &nbsp; https://gemnasium.com/boof/guard-tilt.png
 
 Guard to render templates.
 
