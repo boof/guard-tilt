@@ -1,5 +1,5 @@
 =begin Output Path
-class OuputPath < Guard::Tilt::Path
+class OuputPath < Guard::Tilt::OutputPath
 
   BASE = File.expand_path 'views'
   ROOT = File.expand_path 'public'
@@ -12,10 +12,13 @@ class OuputPath < Guard::Tilt::Path
   end
 
   # Set the Path class.
-  Guard::Tilt.path = self
+  Guard::Tilt.output_path = self
 
 end
 =end
+
+# default:
+# Guard::Tilt.root = Dir.getwd
 
 context = Struct.new(:path) # default
 =begin Context Object

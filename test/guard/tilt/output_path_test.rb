@@ -1,10 +1,10 @@
 require File.expand_path('../../../teststrap', __FILE__)
 
 context "guard-tilt" do
-  context "path" do
+  context "output path" do
 
     setup do
-      Guard::Tilt::Path.new '/foo/bar/index.html.erb'
+      Guard::Tilt::OutputPath.new '/foo/bar/index.html.erb'
     end
 
     asserts "strip_extname" do

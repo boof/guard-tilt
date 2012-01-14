@@ -1,5 +1,5 @@
-class Guard::Tilt::Path < Struct.new(:to_str)
-  Guard::Tilt.path = self
+class Guard::Tilt::OutputPath < Struct.new(:to_str)
+  Guard::Tilt.output_path = self
 
   # Template Method
   def sanitize

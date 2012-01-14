@@ -1,13 +1,20 @@
-= Guard-Tilt
+= Guard-Tilt https://secure.travis-ci.org/boof/guard-tilt.png http://stillmaintained.com/boof/guard-tilt.png https://gemnasium.com/boof/guard-tilt.png
 
 Guard to render templates.
 
 == Configuration
 
     :context
-    # Class becoming instantiated with path for template being rendered
+    # Class instantiated with path for template being rendered
     :locals
     # Hash returning instances of Hash for path, may respond to reload
+
+    # mangle the output path
+    Guard::Tilt.output_path = Guard::Tilt::OutputPath
+    # change root directory, useful for tests
+    Guard::Tilt.root = Dir.getwd
+
+For details see the Guardfile template.
 
 == Installation
 

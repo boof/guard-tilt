@@ -8,7 +8,7 @@ module Guard
     DEFAULT_CONTEXT = Struct.new(:path)
     DEFAULT_LOCALS  = Hash.new({})
 
-    def self.path=(klass) @@path = klass; end
+    def self.output_path=(klass) @@path = klass; end
     def self.root=(root) @@root = root; end
     def self.root; @@root; end
 
@@ -63,7 +63,10 @@ module Guard
         log e.message, :error
       end
       def render_template(template, path)
-        output = template.render(@context.new(path), @locals[path])
+        context = @context.new path
+        locals  = @locals.fetch path, {}
+
+        template.render(context, locals)
       rescue Exception => e
         log e.message, :error
       end
@@ -76,5 +79,5 @@ module Guard
   end
 end
 
-require File.expand_path('../tilt/path.rb', __FILE__)
+require File.expand_path('../tilt/output_path.rb', __FILE__)
 Guard::Tilt.root = Dir.getwd

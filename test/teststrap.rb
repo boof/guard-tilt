@@ -11,7 +11,7 @@ require 'riot'
 require 'guard'
 require File.expand_path('../../lib/guard/tilt', __FILE__)
 
-class Content < Guard::Tilt::Path
+class Content < Guard::Tilt::OutputPath
 
   ReturnParameter = Class.new do
     def method_missing(m, *params) return m => params end
@@ -38,4 +38,4 @@ Guard.guards # initialize guards array
 Guard::Dsl.new.instance_eval do
   guard('tilt') { watch %r'views/.+\..+\..+' }
 end
-Guard::Tilt.path = Content
+Guard::Tilt.output_path = Content
